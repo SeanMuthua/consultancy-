@@ -391,25 +391,24 @@ export function ProjectEstimator() {
                                                             <p className="text-xs text-gray-400">10-minute free consultation with our strategist</p>
                                                         </div>
                                                     </div>
-                                                    <div className="flex gap-3">
-                                                        <div className="w-5 h-5 rounded border border-white/10 flex items-center justify-center shrink-0 mt-0.5">
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-sm font-bold text-white">Request Proposal</p>
-                                                            <p className="text-xs text-gray-400">Detailed proposal with exact pricing & brief</p>
-                                                        </div>
-                                                    </div>
+
                                                     <a
                                                         href="https://wa.me/254791539750"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="flex gap-3 group/wa"
+                                                        className="flex gap-3 group/wa items-start"
                                                     >
-                                                        <div className="w-5 h-5 rounded border border-white/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/wa:border-green-500/50 group-hover/wa:bg-green-500/10 transition-colors">
-                                                            <MessageCircle size={10} className="text-gray-500 group-hover/wa:text-green-500" />
+                                                        <div className="relative">
+                                                            <div className="absolute inset-0 bg-green-500/40 blur-md rounded-full animate-pulse" />
+                                                            <div className="w-5 h-5 rounded border border-green-500/50 flex items-center justify-center shrink-0 mt-0.5 bg-green-500/10 relative z-10">
+                                                                <MessageCircle size={10} className="text-green-500" />
+                                                            </div>
                                                         </div>
                                                         <div>
-                                                            <p className="text-sm font-bold text-white group-hover/wa:text-green-500 transition-colors">WhatsApp Quick Chat</p>
+                                                            <p className="text-sm font-bold text-green-400 group-hover/wa:text-green-300 transition-colors flex items-center gap-2">
+                                                                WhatsApp Quick Chat
+                                                                <span className="text-[10px] bg-green-500/20 px-1.5 py-0.5 rounded text-green-300 border border-green-500/30">Click to Chat</span>
+                                                            </p>
                                                             <p className="text-xs text-gray-400">Clarifying questions before booking</p>
                                                         </div>
                                                     </a>
@@ -433,12 +432,6 @@ export function ProjectEstimator() {
                                                         <Link href={`/book-now?service=${activeTab}&budget=${total}&scope=${scope.title}`}>
                                                             Schedule Discovery Call
                                                         </Link>
-                                                    </Button>
-                                                    <Button
-                                                        variant="outline"
-                                                        className="w-full border-white/10 text-white hover:bg-white/5 h-12 text-sm"
-                                                    >
-                                                        Receive Detailed Proposal
                                                     </Button>
                                                 </div>
                                             </div>

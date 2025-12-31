@@ -8,7 +8,7 @@ import { Newsletter } from "@/components/services/newsletter"
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-black">
+        <main className="min-h-screen bg-black overflow-x-hidden">
             <AboutHero />
             <Stats />
             <Mission />
