@@ -45,7 +45,7 @@ export function TeamMemberCard({
                     : "bg-gradient-to-br from-red-500/20 via-transparent to-red-500/20 animate-pulse"
             )} />
 
-            <div className="relative h-full bg-[#050505] rounded-xl p-8 overflow-hidden">
+            <div className="relative h-full bg-[#050505] rounded-xl p-6 md:p-8 overflow-hidden">
                 {/* Background Decor */}
                 <div className="absolute top-0 right-0 p-4 opacity-5">
                     {isSenior ? <Shield size={120} /> : <Rocket size={120} />}
@@ -53,16 +53,16 @@ export function TeamMemberCard({
 
                 {/* Header */}
                 <div className="relative z-10 mb-8">
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
                         <div className={cn(
-                            "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border",
+                            "px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider border",
                             isSenior
                                 ? "bg-red-950/30 border-red-900/50 text-red-500"
                                 : "bg-red-500/10 border-red-500/30 text-red-400"
                         )}>
                             {isSenior ? "Track 1: Enterprise Architect" : "Track 2: Modern Web Specialist"}
                         </div>
-                        <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
+                        <div className="flex items-center gap-2 text-[10px] sm:text-xs font-mono text-gray-500">
                             <span className={cn(
                                 "w-2 h-2 rounded-full animate-pulse",
                                 availability.toLowerCase().includes("limited") ? "bg-yellow-500" : "bg-green-500"
@@ -71,13 +71,13 @@ export function TeamMemberCard({
                         </div>
                     </div>
 
-                    <h3 className="text-3xl font-bold text-white mb-2">{name}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">{name}</h3>
                     <p className={cn(
-                        "text-lg font-medium mb-4",
+                        "text-base sm:text-lg font-medium mb-4",
                         isSenior ? "text-red-700" : "text-red-500"
                     )}>{role}</p>
 
-                    <p className="text-gray-400 leading-relaxed text-sm h-20">
+                    <p className="text-gray-400 leading-relaxed text-sm">
                         {bio}
                     </p>
                 </div>

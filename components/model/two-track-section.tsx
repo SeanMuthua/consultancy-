@@ -15,7 +15,7 @@ export function TwoTrackSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* Track 1: Steve */}
                     <div>
                         <div className="mb-6 text-center md:text-left">
@@ -24,7 +24,7 @@ export function TwoTrackSection() {
                         </div>
                         <TeamMemberCard
                             type="senior"
-                            name="Steve Ireri"
+                            name="Steven Ireri"
                             role="Senior Enterprise Architect"
                             image="/steve.jpg"
                             bio="With 15+ years building enterprise systems, I now focus on complex architecture and team leadership. I train and oversee the team to bring modern web development to clients who need senior guidance without enterprise pricing."
@@ -37,7 +37,7 @@ export function TwoTrackSection() {
                     </div>
 
                     {/* Track 2: You */}
-                    <div className="mt-12 md:mt-24">
+                    <div className="mt-8 md:mt-24">
                         <div className="mb-6 text-center md:text-left">
                             <h2 className="text-2xl font-bold text-red-400">Track 2: Modern Web</h2>
                             <p className="text-gray-500 text-sm mt-1">For high-performance websites & apps</p>
