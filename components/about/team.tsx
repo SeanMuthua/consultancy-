@@ -5,9 +5,9 @@ import { Github, Linkedin, Mail, Globe } from "lucide-react"
 
 const team = [
     {
-        name: "Steve",
-        role: "IT Consultant & Full-Stack Developer",
-        bio: "An experienced IT consultant and full-stack web and software developer. Steve combines broad technical expertise with strategic vision to drive digital transformation.",
+        name: "Steven Ireri",
+        role: "IT Consultant & Senior Enterprise Architect",
+        bio: "With 15+ years building enterprise systems, I now focus on complex architecture and team leadership. I train and oversee the team to bring modern web development to clients who need senior guidance without enterprise pricing.",
         image: "bg-gradient-to-br from-gray-800 to-gray-900", // Placeholder
         icon: "S",
         links: [
@@ -16,9 +16,9 @@ const team = [
         ]
     },
     {
-        name: "Sean",
-        role: "Full-Stack Developer",
-        bio: "A dedicated full-stack developer focusing on robust and scalable solutions. Sean brings technical precision and innovative problem-solving to every layer of the application.",
+        name: "Sean Muthua",
+        role: "Modern Web Specialist",
+        bio: "I specialize in modern web technologies and premium user experiences. Under Steve's architectural oversight, I deliver cutting-edge solutions that combine current best practices with proven enterprise discipline.",
         image: "bg-gradient-to-br from-gray-800 to-gray-900", // Placeholder
         icon: "S",
         links: [
