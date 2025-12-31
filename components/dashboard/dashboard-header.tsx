@@ -21,7 +21,7 @@ export function DashboardHeader() {
                         <div className="w-2 h-2 bg-red-600 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     </div>
                     <span className="text-xl font-bold tracking-tight text-white group-hover:text-red-500 transition-colors">
-                        RedShift<span className="text-red-600">.</span>
+                        Crimson Forge<span className="text-red-600">.</span>
                     </span>
                 </Link>
 

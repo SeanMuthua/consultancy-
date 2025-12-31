@@ -31,7 +31,7 @@ export function Values() {
                     viewport={{ once: false, amount: 0.2 }}
                     className="mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The RedShift Standard</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The Crimson Standard</h2>
                     <p className="text-gray-400 max-w-2xl">Three pillars that define every line of code we write and every pixel we place.</p>
                 </motion.div>
 

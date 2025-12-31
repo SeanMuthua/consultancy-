@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
     { name: "CyberSec Audit", client: "Nexus Corp", team: ["https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100&q=80", "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"], count: "+2", progress: 75, status: "In Progress", due: "Oct 24, 2023", color: "red" },
-    { name: "RedShift V2 Launch", client: "Internal", team: ["https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80", "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?auto=format&fit=crop&w=100&q=80"], count: "", progress: 45, status: "Review", due: "Nov 01, 2023", color: "yellow" },
+    { name: "Crimson V2 Launch", client: "Internal", team: ["https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=100&q=80", "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?auto=format&fit=crop&w=100&q=80"], count: "", progress: 45, status: "Review", due: "Nov 01, 2023", color: "yellow" },
     { name: "Mobile App Redesign", client: "Starlight Inc.", team: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"], count: "", progress: 90, status: "At Risk", due: "Overdue (2 Days)", color: "red-risk" },
     { name: "Database Migration", client: "FinTech Sol.", team: ["https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=80"], count: "", progress: 100, status: "Completed", due: "Completed Oct 10", color: "green" },
     { name: "Cloud Infrastructure", client: "Global Logistics", team: [], count: "+", progress: 0, status: "Pending", due: "Dec 15, 2023", color: "gray" },
@@ -105,10 +105,10 @@ export default function AdminProjectsPage() {
                                             <div className="flex-1 h-1.5 bg-gray-800 rounded-full overflow-hidden">
                                                 <div
                                                     className={`h-full rounded-full ${item.color === 'green' ? 'bg-green-500' :
-                                                            item.color === 'yellow' ? 'bg-yellow-500' :
-                                                                item.color === 'red-risk' ? 'bg-red-500' :
-                                                                    item.color === 'gray' ? 'bg-gray-600' :
-                                                                        'bg-[#b10202]'
+                                                        item.color === 'yellow' ? 'bg-yellow-500' :
+                                                            item.color === 'red-risk' ? 'bg-red-500' :
+                                                                item.color === 'gray' ? 'bg-gray-600' :
+                                                                    'bg-[#b10202]'
                                                         }`}
                                                     style={{ width: `${item.progress}%` }}
                                                 ></div>
@@ -118,10 +118,10 @@ export default function AdminProjectsPage() {
                                     </td>
                                     <td className="py-4 px-6">
                                         <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase border ${item.status === 'Completed' ? 'bg-green-500/10 text-green-500 border-green-500/20' :
-                                                item.status === 'Review' ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20' :
-                                                    item.status === 'At Risk' ? 'bg-red-500/10 text-red-500 border-red-500/20' :
-                                                        item.status === 'Pending' ? 'bg-gray-800 text-gray-400 border-gray-700' :
-                                                            'bg-[#b10202]/10 text-[#b10202] border-[#b10202]/20'
+                                            item.status === 'Review' ? 'bg-yellow-500/10 text-yellow-500 border-yellow-500/20' :
+                                                item.status === 'At Risk' ? 'bg-red-500/10 text-red-500 border-red-500/20' :
+                                                    item.status === 'Pending' ? 'bg-gray-800 text-gray-400 border-gray-700' :
+                                                        'bg-[#b10202]/10 text-[#b10202] border-[#b10202]/20'
                                             }`}>
                                             {item.status}
                                         </span>

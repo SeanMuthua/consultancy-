@@ -33,7 +33,7 @@ export function Process() {
                 <div className="text-center mb-16">
                     <span className="text-red-500 font-mono text-xs uppercase tracking-widest mb-4 block">How We Work</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-white">
-                        The RedShift Protocol
+                        The Crimson Protocol
                     </h2>
                 </div>
 

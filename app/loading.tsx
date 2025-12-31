@@ -6,7 +6,7 @@ export default function Loading() {
                     <div className="absolute inset-0 border-t-2 border-red-600 rounded-full animate-spin"></div>
                     <div className="absolute inset-2 border-r-2 border-red-900 rounded-full animate-spin reverse"></div>
                 </div>
-                <p className="text-red-600 font-mono text-xs uppercase tracking-widest animate-pulse">Loading RedShift...</p>
+                <p className="text-red-600 font-mono text-xs uppercase tracking-widest animate-pulse">Loading Crimson Forge...</p>
             </div>
         </div>
     )

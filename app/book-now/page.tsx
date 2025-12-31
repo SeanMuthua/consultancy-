@@ -309,7 +309,7 @@ function BookNowContent() {
                                         <Mail size={24} />
                                     </div>
                                     <h4 className="font-bold text-white mb-2">Email</h4>
-                                    <p className="text-sm text-gray-400 mb-2">hello@redshift.digital</p>
+                                    <p className="text-sm text-gray-400 mb-2">hello@crimsonforge.digital</p>
                                     <p className="text-xs text-gray-500 mt-2">For detailed proposals & documents</p>
                                 </div>
                             </motion.div>
@@ -317,7 +317,9 @@ function BookNowContent() {
                     </div>
                 </motion.div>
             </div>
-            <Newsletter />
+            <div className="mt-24">
+                <Newsletter />
+            </div>
         </main>
     )
 }

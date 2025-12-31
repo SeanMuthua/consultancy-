@@ -17,7 +17,7 @@ export function Newsletter() {
                 >
 
                     <div>
-                        <h2 className="text-4xl font-bold text-white mb-6">Ready to Shift?</h2>
+                        <h2 className="text-4xl font-bold text-white mb-6">Ready to Forge?</h2>
                         <p className="text-gray-400 mb-8 max-w-md">
                             Our calendar fills up quickly. Secure your slot for a consultation and let's start building the future of your business today.
                         </p>

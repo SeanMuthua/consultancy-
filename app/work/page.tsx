@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ProjectCard } from "@/components/work/project-card"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 import { projects } from "@/lib/data"
 
@@ -66,9 +67,11 @@ export default function WorkPage() {
 
                     <div className="relative z-10">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Have a project in mind?</h2>
-                        <button className="bg-[#b10202] hover:bg-[#8f0202] text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 mx-auto transition-all shadow-[0_0_20px_rgba(177,2,2,0.3)] hover:shadow-[0_0_40px_rgba(177,2,2,0.5)]">
-                            Let's Build It Together <ArrowRight size={20} />
-                        </button>
+                        <Link href="/book-now">
+                            <button className="bg-[#b10202] hover:bg-[#8f0202] text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-2 mx-auto transition-all shadow-[0_0_20px_rgba(177,2,2,0.3)] hover:shadow-[0_0_40px_rgba(177,2,2,0.5)]">
+                                Let's Build It Together <ArrowRight size={20} />
+                            </button>
+                        </Link>
                     </div>
                 </motion.div >
             </div >

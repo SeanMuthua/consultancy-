@@ -153,7 +153,7 @@ export function Contact() {
                                     <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500">
                                         <Mail size={18} />
                                     </div>
-                                    <span className="text-sm">hello@redshift.digital</span>
+                                    <span className="text-sm">hello@crimsonforge.digital</span>
                                 </div>
                                 <div className="flex items-center gap-3 text-gray-300">
                                     <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-500">

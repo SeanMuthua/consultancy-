@@ -17,7 +17,7 @@ export function AboutCTA() {
                 className="relative z-10 max-w-2xl"
             >
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Ready to <span className="text-[#b10202]">Shift Gears?</span>
+                    Ready to <span className="text-[#b10202]">Forge Ahead?</span>
                 </h2>
                 <p className="text-gray-400 mb-8 max-w-lg mx-auto">
                     Partner with a team that understands the intersection of luxury and technology. Let's discuss your next breakthrough.

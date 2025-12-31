@@ -21,10 +21,10 @@ export function AdminSidebar() {
             <div className="p-6 mb-4">
                 <Link href="/" className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-[#b10202] flex items-center justify-center text-white">
-                        <span className="font-bold">R</span>
+                        <span className="font-bold">C</span>
                     </div>
                     <div>
-                        <h1 className="text-lg font-bold text-white leading-none">REDSHIFT</h1>
+                        <h1 className="text-lg font-bold text-white leading-none">CRIMSON FORGE</h1>
                         <p className="text-[10px] text-gray-500 tracking-wider">ADMIN CONSOLE</p>
                     </div>
                 </Link>
@@ -39,8 +39,8 @@ export function AdminSidebar() {
                             key={item.name}
                             href={item.href}
                             className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive
-                                    ? "bg-[#b10202]/10 text-[#b10202]"
-                                    : "text-gray-400 hover:bg-white/5 hover:text-white"
+                                ? "bg-[#b10202]/10 text-[#b10202]"
+                                : "text-gray-400 hover:bg-white/5 hover:text-white"
                                 }`}
                         >
                             <div className="flex items-center gap-3">

@@ -29,7 +29,7 @@ export function AboutPreview() {
                                 <span className="text-gray-500">Digital Future</span>
                             </h2>
                             <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
-                                RedShift Digital combines premium aesthetics with ruthless efficiency. We strip away the unessential to build systems that scale, brands that resonate, and products that perform.
+                                Crimson Forge Digital combines premium aesthetics with ruthless efficiency. We strip away the unessential to build systems that scale, brands that resonate, and products that perform.
                             </p>
 
                             <Link href="/about">
@@ -45,7 +45,7 @@ export function AboutPreview() {
                             {/* Placeholder Image using Unsplash */}
                             <img
                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                                alt="RedShift Team"
+                                alt="Crimson Forge Team"
                                 className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 grayscale group-hover:grayscale-0"
                             />
 

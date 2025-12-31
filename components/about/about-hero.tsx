@@ -30,7 +30,7 @@ export function AboutHero() {
                     viewport={{ once: false }}
                     className="max-w-3xl mx-auto text-gray-400 text-lg md:text-xl leading-relaxed"
                 >
-                    RedShift Digital is not just a consultancy. We are the architects of the next digital era. Combining premium aesthetics with ruthless efficiency, we build systems that scale.
+                    Crimson Forge Digital is not just a consultancy. We are the architects of the next digital era. Combining premium aesthetics with ruthless efficiency, we build systems that scale.
                 </motion.p>
             </div>
         </section>

@@ -8,7 +8,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-2">
                         <span className="text-xl font-bold tracking-tight text-white">
-                            RedShift<span className="text-[#b10202]">Digital</span>
+                            Crimson Forge<span className="text-[#b10202]">Digital</span>
                         </span>
                     </div>
 
@@ -20,7 +20,7 @@ export function Footer() {
                     </div>
 
                     <div className="text-sm text-gray-600">
-                        &copy; {new Date().getFullYear()} RedShift Digital Inc. All rights reserved.
+                        &copy; {new Date().getFullYear()} Crimson Forge Digital Inc. All rights reserved.
                     </div>
                 </div>
             </div>

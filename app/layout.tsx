@@ -16,8 +16,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RedShift Digital | Accelerating Digital Velocity",
-  description: "Strategic business plans, web apps, and systems designed for exponential growth.",
+  title: "Crimson Forge Digital | Accelerating Digital Velocity",
+  description: "Kenya's Premier Digital Transformation Agency. We build high-performance web applications and digital ecosystems.",
 };
 
 export default function RootLayout({
