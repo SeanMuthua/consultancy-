@@ -3,7 +3,7 @@ import { Services } from "@/components/home/services";
 import { Process } from "@/components/home/process";
 import { FeaturedWork } from "@/components/home/featured-work";
 import { Contact } from "@/components/home/contact";
-
+import { Newsletter } from "@/components/services/newsletter";
 import { AboutPreview } from "@/components/home/about-preview";
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
       <Process />
       <FeaturedWork />
       <Contact />
+      <Newsletter />
     </main>
   );
 }

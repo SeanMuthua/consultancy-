@@ -17,13 +17,13 @@ export function Stats() {
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.2, delay: index * 0.1, ease: "easeOut" }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className="text-center"
                         >
-                            <div className="text-3xl md:text-5xl font-bold text-[#E60000] mb-2 font-mono tracking-tighter">
+                            <div className="text-3xl md:text-5xl font-bold text-[#b10202] mb-2 font-mono tracking-tighter">
                                 {stat.value}
                             </div>
                             <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">

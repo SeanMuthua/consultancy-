@@ -60,7 +60,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     <h2 className="text-3xl font-bold text-white mb-6">Ready to transform your business?</h2>
                     <p className="text-gray-400 mb-8 max-w-xl mx-auto">We bring the same level of engineering excellence and strategic thinking to every project.</p>
                     <div className="flex justify-center gap-4">
-                        <Link href="/booking">
+                        <Link href="/book-now">
                             <Button className="bg-[#b10202] hover:bg-[#8f0202] text-white font-bold h-12 px-8">
                                 Start Your Project <ArrowRight size={16} className="ml-2" />
                             </Button>

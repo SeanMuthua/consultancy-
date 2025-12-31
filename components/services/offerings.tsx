@@ -63,13 +63,17 @@ export function Offerings() {
                     {offerings.map((offering, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="group bg-[#0A0A0A] border border-white/5 rounded-2xl p-8 hover:border-red-500/50 hover:bg-[#111] transition-all duration-300"
+                            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{
+                                delay: index * 0.1,
+                                duration: 1.2,
+                                ease: [0.22, 1, 0.36, 1]
+                            }}
+                            viewport={{ once: false, amount: 0.2 }}
+                            className="group bg-[#0A0A0A] border border-white/5 rounded-2xl p-8 hover:border-[#b10202]/50 hover:bg-[#111] transition-all duration-300"
                         >
-                            <div className="w-12 h-12 rounded-lg bg-red-900/20 flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <div className="w-12 h-12 rounded-lg bg-[#b10202]/10 flex items-center justify-center text-[#b10202] mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <offering.icon size={24} />
                             </div>
 
@@ -81,7 +85,7 @@ export function Offerings() {
                             <ul className="space-y-3">
                                 {offering.features.map((feature, featureIndex) => (
                                     <li key={featureIndex} className="flex items-start gap-3 text-sm text-gray-300">
-                                        <CheckCircle2 size={16} className="text-red-500 mt-0.5 shrink-0" />
+                                        <CheckCircle2 size={16} className="text-[#b10202] mt-0.5 shrink-0" />
                                         <span>{feature}</span>
                                     </li>
                                 ))}

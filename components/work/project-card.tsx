@@ -19,10 +19,10 @@ interface ProjectCardProps {
 export function ProjectCard({ slug, title, category, description, challenge, solution, image, scope, index }: ProjectCardProps) {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: false, amount: 0.2 }}
             className="group relative grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24 last:mb-0 items-center"
         >
             {/* Image Side */}

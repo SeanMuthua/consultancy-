@@ -32,12 +32,17 @@ export function Hero() {
             <motion.div
                 style={{ opacity, y }}
                 className="relative z-10 text-center container mx-auto px-4 flex flex-col items-center"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
             >
                 {/* Status Badge */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 30 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="mb-8 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-950/10 px-5 py-2 text-xs uppercase tracking-widest text-red-500 backdrop-blur-sm"
                 >
                     <span className="relative flex h-2 w-2">
@@ -49,10 +54,11 @@ export function Hero() {
 
                 {/* Main Title */}
                 <motion.h1
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="text-6xl md:text-8xl lg:text-[6.5rem] font-bold tracking-tight text-white mb-8 leading-[1]"
+                    initial={{ opacity: 0, y: 30, scale: 0.95, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                    viewport={{ once: false }}
+                    className="text-6xl md:text-8xl lg:text-[6.5rem] font-bold tracking-tight text-white mb-8 leading-[0.95]"
                 >
                     Accelerating <br />
                     Digital <span className="text-gray-600">Velocity</span>
@@ -60,9 +66,11 @@ export function Hero() {
 
                 {/* Typewriter Subtitle */}
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.4 }}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: { opacity: 1 }
+                    }}
+                    transition={{ duration: 1.2, delay: 0.4 }}
                     className="text-lg md:text-2xl text-gray-400 max-w-3xl mb-12 flex items-center justify-center gap-2"
                 >
                     <span>We specialize in</span>
@@ -73,15 +81,17 @@ export function Hero() {
 
                 {/* CTA Buttons */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        visible: { opacity: 1, y: 0 }
+                    }}
+                    transition={{ duration: 1, delay: 0.8 }}
                     className="flex flex-col sm:flex-row items-center gap-6"
                 >
                     <Button
                         size="lg"
                         onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                        className="bg-red-600 hover:bg-red-700 text-white min-w-[220px] h-16 text-lg font-bold shadow-[0_0_40px_rgba(230,0,0,0.4)] hover:shadow-[0_0_60px_rgba(230,0,0,0.6)] transition-all duration-300 border border-red-500/50"
+                        className="bg-[#b10202] hover:bg-red-700 text-white min-w-[220px] h-16 text-lg font-bold shadow-[0_0_40px_rgba(177,2,2,0.4)] hover:shadow-[0_0_60px_rgba(177,2,2,0.6)] transition-all duration-300 border border-red-500/50"
                     >
                         View Our Services <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>

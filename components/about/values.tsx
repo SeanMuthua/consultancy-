@@ -28,7 +28,7 @@ export function Values() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false, amount: 0.2 }}
                     className="mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The RedShift Standard</h2>
@@ -39,13 +39,13 @@ export function Values() {
                     {values.map((item, index) => (
                         <motion.div
                             key={item.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ duration: 1.2, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className="bg-[#0A0A0A] border border-white/5 p-8 rounded-xl hover:border-red-900/50 transition-colors duration-300 group"
                         >
-                            <div className="w-12 h-12 bg-red-950/20 border border-red-900/30 rounded-lg flex items-center justify-center text-[#E60000] mb-6 group-hover:bg-[#E60000] group-hover:text-white transition-colors duration-300">
+                            <div className="w-12 h-12 bg-red-950/20 border border-red-900/30 rounded-lg flex items-center justify-center text-[#b10202] mb-6 group-hover:bg-[#b10202] group-hover:text-white transition-colors duration-300">
                                 <item.icon size={24} />
                             </div>
                             <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>

@@ -8,7 +8,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-2">
                         <span className="text-xl font-bold tracking-tight text-white">
-                            RedShift<span className="text-red-600">Digital</span>
+                            RedShift<span className="text-[#b10202]">Digital</span>
                         </span>
                     </div>
 

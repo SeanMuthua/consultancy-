@@ -12,24 +12,31 @@ export function Mission() {
 
                     {/* Text Content */}
                     <div className="relative z-10">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-[#E60000]">
-                                <MapPin size={20} fill="currentColor" />
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false, amount: 0.2 }}
+                        >
+                            <div className="flex items-center gap-3 mb-6">
+                                <div className="w-10 h-10 rounded-full bg-red-600/10 flex items-center justify-center text-[#b10202]">
+                                    <MapPin size={20} fill="currentColor" />
+                                </div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-white">Our Mission</h2>
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-white">Our Mission</h2>
-                        </div>
 
-                        <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                            We believe that software should be as beautiful as it is functional. In a world of digital noise, clarity is power. Our mission is to strip away the unessential and amplify the impact of your digital presence through precision engineering and elite design.
-                        </p>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                                We believe that software should be as beautiful as it is functional. In a world of digital noise, clarity is power. Our mission is to strip away the unessential and amplify the impact of your digital presence through precision engineering and elite design.
+                            </p>
 
-                        <div className="flex gap-4">
-                            {["Strategy", "Design", "Development"].map((tag) => (
-                                <span key={tag} className="px-4 py-2 rounded-full border border-red-900/30 bg-red-950/20 text-[#E60000] text-xs font-bold uppercase tracking-wider">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
+                            <div className="flex gap-4">
+                                {["Strategy", "Design", "Development"].map((tag) => (
+                                    <span key={tag} className="px-4 py-2 rounded-full border border-red-900/30 bg-red-950/20 text-[#b10202] text-xs font-bold uppercase tracking-wider">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
 
                     {/* 3D Visual */}

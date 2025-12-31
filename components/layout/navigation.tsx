@@ -13,7 +13,7 @@ const navItems = [
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Work", href: "/work" },
-    { name: "Process", href: "/#process" },
+
     // { name: "Insights", href: "#insights" },
 ]
 
@@ -59,11 +59,11 @@ export function Navigation() {
                             className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
                         >
                             {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#E60000] transition-all group-hover:w-full"></span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#b10202] transition-all group-hover:w-full"></span>
                         </Link>
                     ))}
 
-                    <Link href="/booking">
+                    <Link href="/book-now">
                         <Button className="bg-[#b10202] hover:bg-[#8f0202] text-white font-bold px-6 h-10 shadow-[0_0_15px_rgba(177,2,2,0.4)]">
                             Book Now
                         </Button>
@@ -97,9 +97,11 @@ export function Navigation() {
                             {item.name}
                         </Link>
                     ))}
-                    <Button variant="red" className="w-full mt-4">
-                        Book Consultation
-                    </Button>
+                    <Link href="/book-now" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                        <Button variant="red" className="w-full mt-4">
+                            Book Consultation
+                        </Button>
+                    </Link>
                 </motion.div>
             )}
         </header>

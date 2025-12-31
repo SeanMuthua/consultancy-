@@ -49,10 +49,14 @@ export function Services() {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{
+                                delay: index * 0.1,
+                                duration: 0.8,
+                                ease: [0.21, 1, 0.36, 1]
+                            }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className="p-8 border border-white/5 rounded-xl bg-white/5 hover:border-red-500/50 hover:bg-black/50 transition-all duration-300 group cursor-default"
                         >
                             <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500 mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors">

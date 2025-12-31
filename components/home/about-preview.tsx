@@ -16,10 +16,10 @@ export function AboutPreview() {
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                     <div className="flex-1">
                         <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, x: -30, scale: 0.95 }}
+                            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                            transition={{ duration: 1.2, ease: "easeOut" }}
+                            viewport={{ once: false, amount: 0.2 }}
                         >
                             <span className="text-[#E60000] font-mono text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
                                 The Agency

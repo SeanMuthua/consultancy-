@@ -83,5 +83,93 @@ export const projects: Project[] = [
             { label: "ROI", value: "300%" }
         ],
         technologies: ["Node.js", "GraphQL", "Mapbox GL", "PostGIS", "Redis", "Docker"]
+    },
+    {
+        slug: "aura-lifestyle",
+        title: "Aura Lifestyle",
+        category: "E-commerce",
+        client: "Aura Luxury",
+        year: "2024",
+        description: "An immersive digital storefront for high-end sustainable fashion.",
+        challenge: "Aura needed a digital presence that matched the sensory experience of their physical boutiques, requiring high-fidelity visuals without sacrificing mobile performance.",
+        solution: "We implemented a headless commerce architecture using Shopify Hydrogen and Sanity CMS, featuring WebGL-powered image transitions and a bespoke 3D product viewer.",
+        fullDescription: "The challenge was translating 'luxury' into 'latency'. We needed to serve 4K imagery and 3D models while keeping the LCP under 1.2 seconds across all global markets.",
+        approach: "We used a multi-region Edge CDN strategy combined with localized asset delivery. For the interactive elements, we built a custom shader-based image transition system that runs at a consistent 120fps.",
+        results: "Conversion rates increased by 35% compared to their previous platform. Page load speeds improved by 2.5x, and the 3D product interaction led to a 15% reduction in returns.",
+        image: "bg-gradient-to-br from-amber-900 to-black",
+        scope: ["Headless E-commerce", "3D WebGL Visualization", "Global Performance Optimization", "Brand Identity"],
+        stats: [
+            { label: "Conversion Lift", value: "35%" },
+            { label: "Load Time", value: "1.2s" },
+            { label: "Return Reduction", value: "15%" },
+            { label: "Global Reach", value: "120+" }
+        ],
+        technologies: ["Hydrogen", "Shopify", "Sanity CMS", "Three.js", "Cloudflare"]
+    },
+    {
+        slug: "quantum-analytics",
+        title: "Quantum Analytics",
+        category: "Big Data",
+        client: "Quantum Research",
+        year: "2023",
+        description: "Transforming raw scientific data into actionable insights for quantum computing research.",
+        challenge: "Handling terabytes of experimental data from quantum processors, requiring complex mathematical visualizations that researchers could interact with in real-time.",
+        solution: "We built a high-performance data processing pipeline using Rust and Next.js, featuring a custom WebGL visualization engine for multi-dimensional data mapping.",
+        fullDescription: "Quantum researchers needed a way to spot patterns in noise-prone data. We provided a set of interactive explorers that allow for filtering and pivoting across massive datasets instantly.",
+        approach: "We leveraged WebAssembly to handle heavy computations in the browser. The backend utilizes a ClickHouse database for sub-second query speeds across billions of rows of experimental metrics.",
+        results: "Research throughput increased by 50% as data analysis cycles dropped from hours to minutes. Two previously unknown coherence patterns were discovered using the new visualization tools.",
+        image: "bg-gradient-to-br from-indigo-900 to-black",
+        scope: ["Data Visualization", "WASM Integration", "High-Performance Processing", "Scientific UI Design"],
+        stats: [
+            { label: "Throughput Increase", value: "50%" },
+            { label: "Query Speed", value: "<500ms" },
+            { label: "Data Volume", value: "2TB+" },
+            { label: "User Adoption", value: "100%" }
+        ],
+        technologies: ["Next.js", "Rust (WASM)", "ClickHouse", "WebGL", "Apache Arrow"]
+    },
+    {
+        slug: "zenith-real-estate",
+        title: "Zenith Real Estate",
+        category: "PropTech",
+        client: "Zenith Properties",
+        year: "2024",
+        description: "A luxury property portal featuring 1-on-1 virtual walkthroughs and automated legal staging.",
+        challenge: "Connecting global investors with premium real estate during travel restrictions, ensuring the transaction process was as smooth as the property viewing.",
+        solution: "An integrated platform featuring 8K virtual tours, real-time video consultation, and an automated document management system for cross-border transactions.",
+        fullDescription: "Zenith needed to close the gap between 'interest' and 'investment'. We built a high-trust environment where every detail of the property and the legal process was transparent and accessible.",
+        approach: "We integrated a customized WebRTC solution for high-fidelity video calls with shared screen property navigation. The legal backend utilizes an encrypted vault for document signing and verification.",
+        results: "Cross-border sales increased by 60%. The average closing time for international transactions was reduced from 45 days to just 14 days.",
+        image: "bg-gradient-to-br from-rose-900 to-black",
+        scope: ["PropTech Solution", "WebRTC Integration", "Encrypted Document Vault", "8K Virtual Tours"],
+        stats: [
+            { label: "Sales Increase", value: "60%" },
+            { label: "Closing Time", value: "-31 Days" },
+            { label: "Client Satisfaction", value: "98%" },
+            { label: "Total Assets", value: "$2B+" }
+        ],
+        technologies: ["React", "Go", "WebRTC", "PostgreSQL", "Google Cloud"]
+    },
+    {
+        slug: "vertex-gaming",
+        title: "Vertex Gaming",
+        category: "Gaming & Social",
+        client: "Vertex Esports",
+        year: "2023",
+        description: "The ultimate competitive hub for esports tournaments and community engagement.",
+        challenge: "Supporting massive concurrent traffic during live tournament events while maintaining sub-second latency for live scores and community interactions.",
+        solution: "A distributed system built on Elixir/Phoenix for real-time capabilities, supporting thousands of concurrent users with live brackets and integrated chat.",
+        fullDescription: "Esports fans expect instant updates. We provided a platform that unifies live streaming, bracket tracking, and social interaction into a single, cohesive high-energy experience.",
+        approach: "We choice Elixir for its incredible concurrency model. We implemented a custom CDN layer for live-streaming assets and utilized Redis for ultra-fast caching of tournament statistics.",
+        results: "The platform successfully hosted a 50k concurrent user event with zero downtime. Engagement metrics increased by 200% compared to their previous third-party integrations.",
+        image: "bg-gradient-to-br from-emerald-900 to-black",
+        scope: ["Live Event Scaling", "Real-time Chat Systems", "Dashboard Engineering", "Esports Logistics"],
+        stats: [
+            { label: "Concurrent Users", value: "50k" },
+            { label: "Engagement Lift", value: "200%" },
+            { label: "Latency", value: "<50ms" },
+            { label: "Uptime", value: "100%" }
+        ],
+        technologies: ["Elixir", "Phoenix", "LiveView", "PostgreSQL", "Redis"]
     }
 ]

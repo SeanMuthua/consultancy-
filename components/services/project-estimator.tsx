@@ -3,26 +3,28 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Check, AlertTriangle, RotateCcw, Briefcase, Code, Database } from "lucide-react"
+import { ArrowRight, Check, AlertTriangle, RotateCcw, Briefcase, Code, Database, MessageCircle } from "lucide-react"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 // --- DATA DEFINITIONS ---
 
 // 1. Web App Development (Existing)
 const WEB_SCOPES = [
-    { id: "basic", title: "Basic", subtitle: "Landing / Portfolio", price: 5000, description: "Essential responsive website (2-3 pages)." },
-    { id: "standard", title: "Standard", subtitle: "Business Website", price: 15000, description: "CMS-managed corporate site with dynamic content." },
-    { id: "advanced", title: "Advanced", subtitle: "Web Application", price: 25000, description: "Functional app with auth, database, and interactivity." },
-    { id: "complex", title: "Complex", subtitle: "Enterprise System", price: 50000, description: "Full-scale SaaS or internal tool with custom workflows." }
+    { id: "basic", title: "Basic", subtitle: "Landing / Portfolio", price: 5000, description: "Basic landing page or portfolio website." },
+    { id: "standard", title: "Standard", subtitle: "Static Website", price: 15000, description: "Static website for any business(Can only be viewed on desktop)." },
+    { id: "advanced", title: "Advanced", subtitle: "Responsive Website", price: 25000, description: "Responsive website that can be viewed on any device." },
+    { id: "complex", title: "Complex", subtitle: "Dynamic Web Application", price: 50000, description: "Dynamic website with database and CMS." },
+    { id: "enterprise", title: "Enterprise", subtitle: "Enterprise Web Application", price: 100000, description: "Enterprise-grade web application with custom workflows." }
 ]
 const WEB_TIMELINES = [
     { id: "standard", title: "Standard", multiplier: 1.0, description: "Balanced pace. Best value.", label: "Recommended" },
     { id: "priority", title: "Accelerated", multiplier: 1.5, description: "30% faster. High availability required.", label: "Priority" }
 ]
 const WEB_ADDONS = [
-    { id: "maintenance", title: "Maintenance Plan (Monthly)", price: 25000 },
+    { id: "maintenance", title: "Maintenance Plan (Monthly)", price: 5000 },
     { id: "seo", title: "SEO & Marketing Setup", price: 45000 },
-    { id: "design", title: "UI/UX Design Package", price: 100000 },
+    { id: "design", title: "UI/UX Design Package", price: 20000 },
     { id: "hosting", title: "Hosting & Support (Monthly)", price: 15000 }
 ]
 
@@ -73,6 +75,7 @@ export function ProjectEstimator() {
     const [addons, setAddons] = useState<string[]>([])
     const [total, setTotal] = useState(0)
     const [showWarning, setShowWarning] = useState(false)
+    const [showNextSteps, setShowNextSteps] = useState(false)
 
     // Current Data Source
     const currentData = {
@@ -119,6 +122,7 @@ export function ProjectEstimator() {
         setScope(currentData.scopes[1])
         setTimeline(currentData.timelines[0])
         setAddons([])
+        setShowNextSteps(false)
     }
 
     return (
@@ -142,7 +146,7 @@ export function ProjectEstimator() {
                             onClick={() => setActiveTab("web")}
                             className={cn(
                                 "flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300",
-                                activeTab === "web" ? "bg-red-600 border-red-600 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
+                                activeTab === "web" ? "bg-[#b10202] border-[#b10202] text-white shadow-[0_0_20px_rgba(177,2,2,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
                             )}
                         >
                             <Code size={18} />
@@ -152,7 +156,7 @@ export function ProjectEstimator() {
                             onClick={() => setActiveTab("business")}
                             className={cn(
                                 "flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300",
-                                activeTab === "business" ? "bg-red-600 border-red-600 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
+                                activeTab === "business" ? "bg-[#b10202] border-[#b10202] text-white shadow-[0_0_20px_rgba(177,2,2,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
                             )}
                         >
                             <Briefcase size={18} />
@@ -162,7 +166,7 @@ export function ProjectEstimator() {
                             onClick={() => setActiveTab("system")}
                             className={cn(
                                 "flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300",
-                                activeTab === "system" ? "bg-red-600 border-red-600 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
+                                activeTab === "system" ? "bg-[#b10202] border-[#b10202] text-white shadow-[0_0_20px_rgba(177,2,2,0.4)]" : "bg-[#0A0A0A] border-white/10 text-gray-400 hover:border-white/30"
                             )}
                         >
                             <Database size={18} />
@@ -173,9 +177,10 @@ export function ProjectEstimator() {
 
                 <motion.div
                     key={activeTab}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
+                    initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: false, amount: 0.1 }}
                     className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto"
                 >
 
@@ -196,14 +201,14 @@ export function ProjectEstimator() {
                                         className={cn(
                                             "text-left p-6 rounded-xl border transition-all duration-300 relative group",
                                             scope.id === s.id
-                                                ? "bg-red-950/10 border-red-600 ring-1 ring-red-600/50"
+                                                ? "bg-[#b10202]/5 border-[#b10202] ring-1 ring-[#b10202]/50"
                                                 : "bg-[#0A0A0A] border-white/5 hover:border-white/10 hover:bg-[#111]"
                                         )}
                                     >
                                         <div className="flex justify-between items-start mb-2">
                                             <span className="font-bold text-white">{s.title}</span>
                                             {scope.id === s.id && (
-                                                <Check size={16} className="text-red-500" />
+                                                <Check size={16} className="text-[#b10202]" />
                                             )}
                                         </div>
                                         <p className="text-xs font-mono text-red-400 mb-2 uppercase tracking-wider">{s.subtitle}</p>
@@ -302,7 +307,7 @@ export function ProjectEstimator() {
                                     </div>
 
                                     <div className="mb-6 flex items-baseline gap-1 text-white">
-                                        <span className="text-2xl font-bold text-red-500">KES</span>
+                                        <span className="text-2xl font-bold text-[#b10202]">KES</span>
                                         <motion.span
                                             key={total}
                                             initial={{ opacity: 0.5, y: 10 }}
@@ -350,10 +355,95 @@ export function ProjectEstimator() {
                                         )}
                                     </AnimatePresence>
 
-                                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white h-14 text-base shadow-[0_0_20px_rgba(220,38,38,0.3)]">
-                                        Book Strategy Call
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </Button>
+                                    {!showNextSteps ? (
+                                        <Button
+                                            onClick={() => setShowNextSteps(true)}
+                                            className="w-full bg-[#b10202] hover:bg-red-700 text-white h-14 text-base shadow-[0_0_20px_rgba(177,2,2,0.3)]"
+                                        >
+                                            Book Strategy Call
+                                            <ArrowRight className="ml-2 w-4 h-4" />
+                                        </Button>
+                                    ) : (
+                                        <motion.div
+                                            initial={{ opacity: 0, x: 20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            className="space-y-6 pt-6 border-t border-white/5"
+                                        >
+                                            <div className="space-y-4">
+                                                <h4 className="text-xl font-bold text-white">Ready to Move Forward?</h4>
+                                                <div className="p-4 bg-red-500/5 border border-red-500/20 rounded-xl">
+                                                    <p className="text-sm text-gray-400 mb-1">Your Estimated Range:</p>
+                                                    <p className="text-2xl font-bold text-white">
+                                                        KES {total.toLocaleString()} - KES {(total * 1.3).toLocaleString()}
+                                                    </p>
+                                                    <p className="text-[10px] text-gray-500 mt-2 italic leading-tight">
+                                                        This estimate is based on your selections. For a precise quote and project plan:
+                                                    </p>
+                                                </div>
+
+                                                <div className="space-y-3">
+                                                    <div className="flex gap-3">
+                                                        <div className="w-5 h-5 rounded border border-red-500/50 flex items-center justify-center shrink-0 mt-0.5 bg-red-500">
+                                                            <Check size={12} className="text-white" />
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-sm font-bold text-white">Schedule Discovery Call (Recommended)</p>
+                                                            <p className="text-xs text-gray-400">10-minute free consultation with our strategist</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex gap-3">
+                                                        <div className="w-5 h-5 rounded border border-white/10 flex items-center justify-center shrink-0 mt-0.5">
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-sm font-bold text-white">Request Proposal</p>
+                                                            <p className="text-xs text-gray-400">Detailed proposal with exact pricing & brief</p>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        href="https://wa.me/254791539750"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex gap-3 group/wa"
+                                                    >
+                                                        <div className="w-5 h-5 rounded border border-white/10 flex items-center justify-center shrink-0 mt-0.5 group-hover/wa:border-green-500/50 group-hover/wa:bg-green-500/10 transition-colors">
+                                                            <MessageCircle size={10} className="text-gray-500 group-hover/wa:text-green-500" />
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-sm font-bold text-white group-hover/wa:text-green-500 transition-colors">WhatsApp Quick Chat</p>
+                                                            <p className="text-xs text-gray-400">Clarifying questions before booking</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div className="py-4 space-y-3">
+                                                    <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Next Steps:</p>
+                                                    <ul className="text-xs text-gray-400 space-y-2 pl-2 border-l border-red-500/30">
+                                                        <li>• We'll contact you within 24 hours</li>
+                                                        <li>• Schedule 10-minute discovery call</li>
+                                                        <li>• Receive detailed proposal</li>
+                                                        <li>• Begin project with clear expectations</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div className="grid grid-cols-1 gap-3">
+                                                    <Button
+                                                        asChild
+                                                        className="w-full bg-[#b10202] hover:bg-red-700 text-white h-12 text-sm shadow-[0_0_20px_rgba(177,2,2,0.2)]"
+                                                    >
+                                                        <Link href={`/book-now?service=${activeTab}&budget=${total}&scope=${scope.title}`}>
+                                                            Schedule Discovery Call
+                                                        </Link>
+                                                    </Button>
+                                                    <Button
+                                                        variant="outline"
+                                                        className="w-full border-white/10 text-white hover:bg-white/5 h-12 text-sm"
+                                                    >
+                                                        Receive Detailed Proposal
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
 
                                     {/* PROMINENT DISCLAIMER */}
                                     <div className="mt-8 text-center bg-red-950/20 border border-red-900/30 p-3 rounded-lg">
